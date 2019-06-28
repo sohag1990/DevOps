@@ -65,14 +65,14 @@ RUN apt-get update -y && apt-get install -y openssl zip unzip git
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN docker-php-ext-install pdo mbstring
 RUN apt-get install php7.2-mysql
-WORKDIR /app
+WORKDIR /app #creating "app" directory inside the new image
 COPY . /app
 RUN composer install
 #RUN composer update #if require to composer to update, uncomment run this command
 #RUN composer upgrade #if require to composer to upgrade, uncomment run this command
 RUN composer dump-autoload
 
-CMD php artisan serve --host=0.0.0.0 --port=8181
+CMD php artisan serve --host=0.0.0.0 --port=8181 #php artisan command to run the app
 EXPOSE 8181
 
 ##Build command to build a new docker image using this docker file
