@@ -30,6 +30,21 @@ $ docker run --name some-mysql -v /srv/gomysql:/var/lib/mysql -e MYSQL_ROOT_PASS
 $ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo #basic mongoDB install and run command
 
 #Golang API Server image run on docker
-docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
+$ docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
 
 
+### Real life example of Docker Build command
+
+#Golang Example
+#Dockerfile
+FROM golang:1.9 #golang image
+
+WORKDIR /go/src/github.com/sohag1990/go-gin-app #creating working directory inside new image
+COPY . . #copy files from current local directory to docker new image current working directory
+
+RUN go get -d -v ./... #to install dependency packages using go get comand.
+RUN go install -v ./... #to build the go application inside the new docker image
+CMD ["go-gin-app"] # to run the app this CMD will trigger. "go-gin-app" this name is the same name of project directory name
+
+##Now run the Build command to build a new docker image using this docker file
+$ docker build -t whoshakhawat/backend-app-api-server . // .(dot) is denoted for current directory. build docker image from current directory.
