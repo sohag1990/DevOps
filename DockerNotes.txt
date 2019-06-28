@@ -1,0 +1,10 @@
+
+Hola :-)
+
+https://docs.docker.com/
+
+docker -v // to check docker version
+
+
+
+
