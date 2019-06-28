@@ -20,6 +20,7 @@ $ docker rm containerID #to remove stoped/exited container from process
 $ docker rmi imageID/IDs #to remove/delete/uninstall image/images from docker machine
 
 $ docker login #to login Dockerhub
+.................................................................................
 
 ### Real life example docker run commands
 #Mysql
@@ -31,11 +32,14 @@ $ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo #basic mong
 
 #Golang API Server image run on docker
 $ docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
+..................................................................................
 
 
-### Real life example of Docker Build command
+### Real life example of Docker Build and run command
 
-#Golang Example
+##Golang Example
+................
+
 #Dockerfile
 FROM golang:1.9 #golang image
 
@@ -46,5 +50,10 @@ RUN go get -d -v ./... #to install dependency packages using go get comand.
 RUN go install -v ./... #to build the go application inside the new docker image
 CMD ["go-gin-app"] # to run the app this CMD will trigger. "go-gin-app" this name is the same name of project directory name
 
-##Now run the Build command to build a new docker image using this docker file
-$ docker build -t whoshakhawat/backend-app-api-server . // .(dot) is denoted for current directory. build docker image from current directory.
+##Build command to build a new docker image using this docker file
+$ docker build -t whoshakhawat/backend-app-api-server . # .(dot) is denoted for current directory. build docker image from current directory.
+## Run Command
+$ docker run --net=host --rm -d -p 443:443 --name backend-app-api-server-ssl whoshakhawat/backend-app-api-server # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
+
+
+
