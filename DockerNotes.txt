@@ -26,5 +26,6 @@ $ docker login #to login Dockerhub
 docker run --name go_mysql -v /srv/gomysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=111111 -d mariadb #basic mysql install and run command in linux machine
 $ docker run --name some-mysql -v /srv/gomysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci #advance mysql docker run command. Mysql Database To support utf8mb4_unicode_ci
 
-
+#MongoDB
+$ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo #basic mongoDB install and run command
 
