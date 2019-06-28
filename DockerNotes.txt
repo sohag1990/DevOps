@@ -4,22 +4,22 @@ Hola :-)
 https://docs.docker.com/
 
 # Basic commands
-docker -v // to check docker version
-docker pull ImageName // to install/pull/download a docker image in docker machine.
+$ docker -v #to check docker version
+$ docker pull ImageName #to install/pull/download a docker image in docker machine.
 
-docker run [OPTIONS] IMAGE [COMMAND] [ARG...] // Docker Run command will find with the specific docker image documentation
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...] #Docker Run command will find with the specific docker image documentation
 
-docker push username/ImageName // to push a own docker image on Dockerhub. follow the naming convension. username/imageName
-docker images // to check installed available images
-docker ps // to view all running containers
-docker ps -a // to view all containers including running and stoped/exited.
-docker stop containerID/IDs // to stop a container eg. docker stop 343, no need full container id. just unique part of containerID. multipe containerID space separated, supporte to take bulk action.  
-docker start containerID/IDs // to start a stoped container. multiple ids supported to take bulk action
-docker inspect containerID // to show the details of a container. Installation/environment variables/host with all the details of container.
-docker rm containerID // to remove stoped/exited container from process
-docker rmi imageID/IDs // to remove/delete/uninstall image/images from docker machine
+$ docker push username/ImageName #to push a own docker image on Dockerhub. follow the naming convension. username/imageName
+$ docker images #to check installed available images
+$ docker ps #to view all running containers
+$ docker ps -a #to view all containers including running and stoped/exited.
+$ docker stop containerID/IDs #to stop a container eg. docker stop 343, no need full container id. just unique part of containerID. multipe containerID space separated, supporte to take bulk action.  
+$ docker start containerID/IDs #to start a stoped container. multiple ids supported to take bulk action
+$ docker inspect containerID #to show the details of a container. Installation/environment variables/host with all the details of container.
+$ docker rm containerID #to remove stoped/exited container from process
+$ docker rmi imageID/IDs #to remove/delete/uninstall image/images from docker machine
 
-docker login // to login Dockerhub
+$ docker login #to login Dockerhub
 
 
 
