@@ -3,8 +3,13 @@ Hola :-)
 
 https://docs.docker.com/
 
+# Basic commands
 docker -v // to check docker version
-
-
-
+docker images // to check installed available images
+docker ps // to view all running containers
+docker ps -a // to view all containers including running and stoped/exited.
+docker stop containerID/IDs // to stop a container eg. docker stop 343, no need full container id. just unique part of containerID. multipe containerID space separated, supporte to take bulk action.  
+docker start containerID/IDs // to start a stoped container. multiple ids supported to take bulk action
+docker rm containerID // to remove stoped/exited container from process
+docker rmi imageID/IDs // to remove/delete/uninstall image/images from docker machine
 
