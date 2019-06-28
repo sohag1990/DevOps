@@ -29,3 +29,7 @@ $ docker run --name some-mysql -v /srv/gomysql:/var/lib/mysql -e MYSQL_ROOT_PASS
 #MongoDB
 $ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo #basic mongoDB install and run command
 
+#Golang API Server image run on docker
+docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
+
+
