@@ -1,0 +1,17 @@
+Hola :-)
+
+https://github.com
+https://bitbucket.org
+
+
+###Basic Git commands
+
+$ git init
+$ git add . # .(dot) is denoted by current directory
+$ git config --global user.email "me@domain.com" # specify --global to use git globaly on your machine.
+$ git commit -m "change message"
+$ git remote add origin git@github.com:sohag1990/DevOps.git #ssh remote
+$ git remote add origin https://github.com/sohag1990/DevOps.git #https remote
+$ git pull origin master # to pull from remote
+$ git pull origin master --allow-unrelated-histories #to pull from unrelated history. To fix the fatel error of unrelated histories
+$ git push origin master
