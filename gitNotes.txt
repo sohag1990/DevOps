@@ -4,7 +4,7 @@ https://github.com
 https://bitbucket.org
 
 
-###Basic Git commands
+###Git commands
 
 $ git init
 $ git add . # .(dot) is denoted by current directory
@@ -15,3 +15,15 @@ $ git remote add origin https://github.com/sohag1990/DevOps.git #https remote
 $ git pull origin master # to pull from remote
 $ git pull origin master --allow-unrelated-histories #to pull from unrelated history. To fix the fatel error of unrelated histories
 $ git push origin master
+
+$ git tag # to show all release versions
+$ git tag -a v0.1 -m "inital version" # to release a version of your git porject
+$ git push origin --tags # to push all tags/release to remote origin
+
+$ git branch # to show available branches
+$ git branch "branchName" # to create a new branch
+$ git branch "DevOps-Beta" # this command create a new branch name "DevOps-Beta"
+$ git checkout BranchName # to Switch another branch
+$ git checkout DevOps-Beta # this command Switched me to branch 'DevOps-Beta'
+$ git checkout master # this command Switched me to branch 'master' . Master is my main branch
+$ git checkout --track -b DevOps-Stable # this command create new branch "DevOps-Stable" and Switched me to the new branch "DevOps-Stable"
