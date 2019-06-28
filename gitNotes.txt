@@ -25,5 +25,6 @@ $ git branch "branchName" # to create a new branch
 $ git branch "DevOps-Beta" # this command create a new branch name "DevOps-Beta"
 $ git checkout BranchName # to Switch another branch
 $ git checkout DevOps-Beta # this command Switched me to branch 'DevOps-Beta'
+$ git push origin DevOps-Beta # this command i pushed to the 'DevOps-Beta' Banch
 $ git checkout master # this command Switched me to branch 'master' . Master is my main branch
 $ git checkout --track -b DevOps-Stable # this command create new branch "DevOps-Stable" and Switched me to the new branch "DevOps-Stable"
