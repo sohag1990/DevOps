@@ -8,7 +8,27 @@ $ mongo --host 172.17.0.3 #to connect mongo server
 > db.runCommand( { listCollections: 1.0, authorizedCollections: true, nameOnly: true } ) # to show the available tables
 ## to fetch data from a collection
 > db.chats.find().pretty(); #to show all chat data entry from chat collection/table
-
+> db.chats.find( { name: "Joe" } ); # find by name "Joe"
+## delete entry
+> db.chats.deleteOne( { "_id" : ObjectId("563237a41a4d68582c2509da") } );
+> db.chats.deleteMany( { "name" : "Joe" } );
+## insert entry
+> db.chats.insertOne( { name: "John", message: "Hola" } );
+> db.chats.insertMany( [
+      { name: "Doe", message: "Hi" },
+      { name: "John", message: "There" },
+      { name: "Joe" , message: "Hola" }
+   ] );
+## Update entry
+> db.chats.updateOne(
+      { "name" : "Dev" },
+      { $set: { "message" : "!!!Boom!!!" } }
+   );
+> db.chats.updateMany(
+      { count: { $gt: 4 } },
+      { $set: { "Review" : true } }
+   );   
+   
 > db.getCollectionInfos(); # to show all collections
 > db.chats.remove({}) # truncate chats collection
 
