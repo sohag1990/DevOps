@@ -2,6 +2,7 @@ Hola :-)
 
 ### WP Cli basic commands
 ############ Ref https://developer.wordpress.org/cli/commands/
+
 $ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar #keep the wp-cli.phar file in wp root directory
 $ php wp-cli.phar --info # to check the wp-cli works
 $ chmod +x wp-cli.phar # make the wp-cli.phar file executable
@@ -32,6 +33,9 @@ Success: Updated 'prod' alias.
 # Delete alias.
 $ wp cli alias delete @prod
 Success: Deleted '@prod' alias.
+
+$ wp plugin install pluginName --activate # install and  plugin to wordpress by cli
+
 
 ##control maintenance mode
 
