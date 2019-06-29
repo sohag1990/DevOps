@@ -1,0 +1,10 @@
+Hola :-)
+
+###RClone
+
+##rclone commands
+$ rclone config # to config rclone
+$ rclone ls googleDrive:/ #to show all files available in googleDrive
+$ rclone -h 
+$ rclone  copy ./ googleDrive:/bakup/ # rclone copy current directory all files to googleDrive bakup folder
+$ rclone copy googleDrive:/"Christian Martin - The Work From Anywhere Accelerator" ./ -v # this command download the google Drive remote directoy to my local machine
