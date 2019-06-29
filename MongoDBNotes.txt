@@ -2,3 +2,18 @@ Hola :-)
 
 #MongoDB commands
 
+$ mongo --host 172.17.0.3 #to connect mongo server
+> db.adminCommand( { listDatabases: 1 } ) # to list database
+> use mongochat # to select database mongoChat
+> db.runCommand( { listCollections: 1.0, authorizedCollections: true, nameOnly: true } ) # to show the available tables
+## to fetch data from a collection
+> db.chats.find().pretty(); #to show all chat data entry from chat collection/table
+
+> db.getCollectionInfos(); # to show all collections
+> db.chats.remove({}) # truncate chats collection
+
+## mongodb backup and restore
+#Export
+$ mongoexport -h 172.17.0.3 -d mongochat -c mongochat -o ~/backup/mongobak-30-march/mongochat.json
+# Import/Restore:
+$ mongoimport -h 172.17.0.3 -d mongochat -c mongochat ~/backup/mongobak-30-march/mongochat.json
