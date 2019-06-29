@@ -1,0 +1,19 @@
+Hola :-)
+
+#Kubernetes Short notes
+
+#Kubectl = 
+#UI = 
+#API = 
+
+
+##Master = 
+#API Server =
+#etcd =
+#Controller Manager = 
+
+##Worker Node =
+#Kubelet =
+#Kube-Proxy =
+#Pod =
+#Docker Container =
