@@ -1,0 +1,22 @@
+Hola :)
+
+#manage swap memory
+swapoff -a
+Permanently off swaf: sudo vi /etc/fstab
+
+apt-cache policy kubelet | head -n 20
+more /filename # To view file in pretty way . alternative of cat
+scp ./dt-the7.zip   imrojony@192.168.1.105:Desktop/ #scp secure copy server to server
+
+#tar zip (c=create, z=zip, v=verbose, f=allow to filename)
+tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+tar -czvf archive.tar.gz stuff
+#zip multiple directory
+tar -czvf archive.tar.gz /home/ubuntu/Downloads /usr/local/stuff /home/ubuntu/Documents/notes.txt
+#exclude directory
+tar -czvf archive.tar.gz /home/ubuntu --exclude=/home/ubuntu/Downloads --exclude=/home/ubuntu/.cache
+tar -czvf archive.tar.gz /home/ubuntu --exclude=*.mp4
+
+#tar unzip
+tar -xzvf archive.tar.gz
+tar -xzvf archive.tar.gz -C /tmp # -C = switch to the folder after command done 
