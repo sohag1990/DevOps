@@ -31,5 +31,3 @@ aws --version
 # To config aws-cli
 aws configure
 
-#to describe existing instances
-aws ec2 describe-instances

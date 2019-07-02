@@ -46,3 +46,10 @@ aws s3 rm my-bucket/path/MyFile.txt
 
 #Delete s3://my-bucket/path and all of its contents
 aws s3 rm my-bucket/path --recursive
+
+
+# Applying a Custom ACL
+aws s3api put-bucket-acl --bucket MyBucket --grant-full-control 'emailaddress="user1@example.com",emailaddress="user2@example.com"' --grant-read 'uri="http://acs.amazonaws.com/groups/global/AllUsers"'
+# Configuring a Logging Policy
+aws s3api put-bucket-acl --bucket MyBucket --grant-read-acp 'URI="http://acs.amazonaws.com/groups/s3/LogDelivery"' --grant-write "URI="http://acs.amazonaws.com/groups/s3/LogDelivery"'
+aws s3api put-bucket-logging --bucket MyBucket --bucket-logging-status file://logging.json
