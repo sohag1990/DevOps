@@ -27,6 +27,7 @@ kubectl get pods --all-namespaces --watch
 #All system pods should be Running
 kubectl get pods --all-namespaces
 
+
 #Get a list of our current nodes, just the master.
 kubectl get nodes 
 

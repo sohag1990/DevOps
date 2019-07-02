@@ -33,6 +33,9 @@ grep keyword filename
 grep -n keyword filename #-n = line number
 grep -c keyword filename #-c = count
 find ~/Desktop/docs/ -name *txt | xargs -i keywordThatWantToFind
+
+locate filename/foldername
+
 # Shells
 cat /etc/Shells
 echo $SHELL 

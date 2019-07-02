@@ -46,11 +46,11 @@ kubectl describe deployment hello-world | more
 #Let's see what describe can tell us about a deployed Pod.
 #Check out the Name, Node, Status, Containers, and events.
 kubectl get pods
-kubectl describe pods $PASTEPODNAMEHERE | more
+kubectl describe pods hello-world-84d7db94c9-7krg2 | more
 
 #Expose the Deployment as a Serivce.
 #This will create a Service for the ReplicaSet behind the Deployment
-#We are exposing our serivce on port 80, connecting to an application running on 8080 in our pod.
+#We are exposing our  serivce on port 80, connecting to an application running on 8080 in our pod.
 #Port: Interal Cluster Port, the Service's port. You will point cluster resources here.
 #TargetPort: The Pod's Serivce Port, your application. That one we defined when we started the pods.
 kubectl expose deployment hello-world --port=80 --target-port=8080
@@ -62,7 +62,7 @@ kubectl get service hello-world
 kubectl describe service hello-world
 
 #Access the service inside the cluster
-curl http://$SERVCIEIP:$PORT
+curl http://10.100.226.251:80
 
 #Access the pod's application directly, useful for troubleshooting.
 kubectl get endpoints hello-world
