@@ -6,7 +6,7 @@ which aws
 # rm -rf /usr/local/bin/aws
 # sudo rm -rf /usr/local/bin/aws
 
-#download the sourch zip file of aws-cli
+#download the source zip file of aws-cli
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 #unzip source zip file
 unzip awscli-bundle.zip
@@ -24,4 +24,12 @@ source ~/.bashrc
 aws --version
 
 
+# Uninstall the AWS CLI
+# sudo rm -rf /usr/local/aws
+# sudo rm /usr/local/bin/aws
 
+# To config aws-cli
+aws configure
+
+#to describe existing instances
+aws ec2 describe-instances
