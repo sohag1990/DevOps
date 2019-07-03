@@ -1,4 +1,4 @@
-Hola :-)
+# Hola :-)
 
 ###Kubernetes Short notes
 
@@ -18,43 +18,43 @@ Hola :-)
 #Docker Container = A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
 
 ##Kubelet
->Motiors API Server for changes
->Responsible for Pod Lifecycle
->Reports Node & Pod State
->Pod liveness Probes
+# >Motiors API Server for changes
+# >Responsible for Pod Lifecycle
+# >Reports Node & Pod State
+# >Pod liveness Probes
 
 ##Kube-proxy
->Network proxy iptables
->Implements Services
->Routing traffic to pods
-> Load Banlancing
+# >Network proxy iptables
+# >Implements Services
+# >Routing traffic to pods
+# > Load Banlancing
 
 ##Container runtime
->Downloads images and runs containers
->Container Runtime interface
->Docker
->Many others container
+# >Downloads images and runs containers
+# >Container Runtime interface
+# >Docker
+# >Many others container
 
 
 ##Scheduled/Add-on pods
->DNS: to manage DNS
->Ingress: Loadbanancing
->Dashboard: administrative Dashboard
+# >DNS: to manage DNS
+# >Ingress: Loadbanancing
+# >Dashboard: administrative Dashboard
 
 
 ############
-> All Pods can communicate with each other on all nodes
-> All Nodes can communicate with all Pods
-> No network Address Translation(NAT)
+# > All Pods can communicate with each other on all nodes
+# > All Nodes can communicate with all Pods
+# > No network Address Translation(NAT)
 ############
-Default 
-API Port : 6443 All 
-etcd Port: 2379-2380  API/etcd
-Scheduler Port: 10251 Self
-Controller Manager Port: 10252 selft
-kubelet port: 10250 Control plane
-
-NodePort 30000-32767 All
+# Default 
+# API Port : 6443 All 
+# etcd Port: 2379-2380  API/etcd
+# Scheduler Port: 10251 Self
+# Controller Manager Port: 10252 selft
+# kubelet port: 10250 Control plane
+# 
+# NodePort 30000-32767 All
 
 
 
