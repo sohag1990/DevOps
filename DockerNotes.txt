@@ -4,6 +4,8 @@ Hola :-)
 https://docs.docker.com/
 
 # Basic commands
+#restart docker engine
+service docker restart 
 $ docker -v #to check docker version
 $ docker pull ImageName #to install/pull/download a docker image in docker machine.
 
@@ -18,7 +20,8 @@ $ docker start containerID/IDs #to start a stoped container. multiple ids suppor
 $ docker inspect containerID #to show the details of a container. Installation/environment variables/host with all the details of container.
 $ docker rm containerID #to remove stoped/exited container from process
 $ docker rmi imageID/IDs #to remove/delete/uninstall image/images from docker machine
-
+docker ps -f status=exited -q | xargs -r docker rm #To remove all exited containter
+docker images -f dangling=true -q | xargs -r docker rmi #To remove all unused images
 $ docker login #to login Dockerhub
 .................................................................................
 
@@ -32,10 +35,14 @@ $ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo #basic mong
 
 #Golang API Server image run on docker
 $ docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
+docker run --net=host -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl-v2.1.9.54
+
 ..................................................................................
 
 
 ### Real life example of Docker Build and run command
+## if docker build command can't download the packages, then use command
+docker build --network=host -t who/buildName .
 
 ##Golang Example
 ................
@@ -80,3 +87,11 @@ $ docker build -t whoshakhawat/laravel-app .
 ## Run the docker image in container
 $ docker run -d -p 8181:8181 whoshakhawat/laravel-app
 
+
+## To view all docker volume
+docker volume ls
+#To delete unused docker volume. safe command to free up ocupaid spaces 
+docker volume prune
+#To check the container sizes
+docker ps --size
+docker system df

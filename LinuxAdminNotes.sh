@@ -16,6 +16,14 @@ pwd #present working directory
 w # to check who ar logged in currently
 env # to show the all environment variables
 
+#os update
+sudo apt update
+sudo apt upgrade
+#package install/fix/reinstall
+sudo apt install tar
+sudo dpkg -i debPackage
+#to reinstall a package
+sudo dpkg-reconfigure libdvd-pkg
 
 #command chaining/ multiple command at a time
 mkdir dirName; cd dirName; touch hello.txt #command chain separeted by semicolon
@@ -51,7 +59,12 @@ df -ah
 df -h
 df -hT 
 du -sh /directoryName #du=disk use
+du -h /var/lib/docker | sort -h
+du -shc /var/lib/docker/overlay2/*/diff | grep total
 sudo fdisk -l #details of disk
+ls /var/lib/docker/overlay2/* -d -l -t
+
+
 #Disk mount
 ls /mnt
 mount
