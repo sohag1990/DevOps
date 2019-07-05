@@ -89,7 +89,8 @@ uname
 uname -a
 uname -v
 uname -r
-
+uname -s #os name
+uname -m #os bit
 #check NetStat ... open ports and more
 netstat 
 netstat | more
@@ -150,6 +151,10 @@ sudo chmod u=rwx,g=rx,o=r Confidential
 # 2 = Write
 # 1 = Execute
 # 0 = no permission
+
+#to give the execution/run permission to a application
+sudo chmod +x filename 
+
 
 #Shortlink
 ln -s /home/shakhawat/go/src/github.com/sohag1990/DevOps ~/Desktop/

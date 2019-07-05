@@ -43,6 +43,25 @@ wp cli alias delete @prod
 # install and  plugin to wordpress by cli
 wp plugin install pluginName --activate 
 
+wp plugin list
+wp plugin list --status=active
+wp plugin list --status=active --format=json
+wp plugin activate akismet
+wp plugin deactivate akismet
+wp plugin uninstall akismet
+# Delete plugin
+wp plugin delete paid-membership-pro
+
+# Delete inactive plugins
+wp plugin delete $(wp plugin list --status=inactive --field=name)
+
+#wp scaffold plugin to create/initialize new plugin
+wp scaffold plugin sample-plugin
+wp scaffold plugin --prompt
+
+
+
+
 
 ##control maintenance mode
 
