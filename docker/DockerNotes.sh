@@ -53,6 +53,9 @@ docker run --name mongodb -v ~/mongodata/datadir:/data/db -d mongo
 docker run --net=host --rm -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl 
 docker run --net=host -d -p 443:443 --name go-app-server whoshakhawat/go-app-serverssl-v2.1.9.54
 
+#mautic email marketing tools on docker
+docker run --net=host --name mautic -d --restart=always -e MAUTIC_DB_HOST=127.0.0.1 -e MAUTIC_DB_USER=root -e MAUTIC_DB_PASSWORD=111111 -e MAUTIC_DB_NAME=mautic  -e MAUTIC_RUN_CRON_JOBS=true -p 8888:80 -v mautic_data:/var/www/html  mautic/mautic:latest
+
 ..................................................................................
 
 
