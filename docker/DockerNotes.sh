@@ -82,7 +82,8 @@ docker build -t whoshakhawat/backend-app-api-server .
 ## Run Command
 # --net=host is very special command to share host network. Also the host and the container shares the service ports that are available to the host
 docker run --net=host --rm -d -p 443:443 --name backend-app-api-server-ssl whoshakhawat/backend-app-api-server 
-
+# To enter into docker container as root
+docker run -it whoshakhawat/backend-app-api-server /bin/bash
 
 
 ##Laravel Example
