@@ -117,3 +117,10 @@ docker volume prune
 #To check the container sizes
 docker ps --size
 docker system df
+
+#enter into inside the container 
+docker exec -it 4fase32 bash
+#Docker commit to save content inside docker image
+#Docker commit command commit the inside container changes and save to a new image
+docker commit containerID userID/newImageName
+

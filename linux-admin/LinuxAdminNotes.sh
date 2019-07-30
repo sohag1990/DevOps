@@ -184,3 +184,15 @@ https://www.fprintf.net/vimCheatSheet.html
 sudo -i # to be root
 su - usearname #user login
 su - # to superuser
+
+# SSH KEY
+# If you only have .ppk file then it would be useful to create a .pem file and then connect to your server using that.
+# In you Ubuntu computer, install putty-tools with the following command:
+sudo apt-get install putty-tools
+# Now convert your .ppk file to .pem using the following command:
+puttygen yourkey.ppk -O private-openssh -o yourkey.pem
+# Set the proper permission to use the .pem file with following command:
+chmod 400 yourkey.pem
+# Now connect to your server using the below command:
+
+ssh -i yourkey.pem serverusername@server-ip
