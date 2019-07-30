@@ -136,7 +136,8 @@ tar -czvf archive.tar.gz /home/ubuntu/Downloads /usr/local/stuff /home/ubuntu/Do
 #exclude directory
 tar -czvf archive.tar.gz /home/ubuntu --exclude=/home/ubuntu/Downloads --exclude=/home/ubuntu/.cache
 tar -czvf archive.tar.gz /home/ubuntu --exclude=*.mp4
-
+#create tar exclude folders
+tar -czvf archive.tar.gz --exclude='Licensing' --exclude='Plugins' --exclude='data' ../cena-theme/
 #tar unzip
 tar -xzvf archive.tar.gz
 tar -xzvf archive.tar.gz -C /tmp # -C = switch to the folder after command done 
